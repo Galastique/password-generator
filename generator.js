@@ -57,15 +57,18 @@ function getValues(){
         error += "You must select an option for special characters\n";
     }
 
+    //Other
+    if(l == "none" && n == "false" && s == "false"){
+        error += "You must choose at least 1 option to generate a password";
+    }
+
+    //Proceeds if no errors are found
     if(error == ""){
+        document.getElementById("error").innerText = "";
         generate(chars, length);
     }else{
         document.getElementById("error").innerText = error;
     }
-}
-
-function myFunction2(){
-    document.getElementById("letters").value = inputValue;
 }
 
 //Generates password
@@ -74,6 +77,7 @@ function generate(chars, length){
     for(let x = 0; x < length; x++){
         password += chars.charAt(Math.random() * chars.length);
     }
+    document.getElementById("password").value = password;
 }
 
 console.log(chars);
