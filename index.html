@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+    <title>Password Generator</title>
+    <link rel="icon" href="./icon.png">
     <head>
         
     </head>
@@ -15,7 +17,7 @@
 
                 <div class="letters">
                     <label for="letters">Contains letters: </label>
-                    <select name="letters" id="letters">
+                    <select id="letters">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="lower">Lowercase</option>
                         <option value="upper">Uppercase</option>
@@ -26,7 +28,7 @@
 
                 <div class="numbers">
                     <label for="numbers">Contains numbers: </label>
-                    <select name="numbers" id="numbers">
+                    <select id="numbers">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -35,7 +37,7 @@
 
                 <div class="special">
                     <label for="special">Contains special characters: </label>
-                    <select name="special" id="special">
+                    <select id="special">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -44,6 +46,8 @@
             </div>
             <p id="error"></p>
             <button id="button" onclick="getValues()">Generate password</button>
+            
+            <input type="text" id="password"  placeholder="">
 
         </div>
     </body>
@@ -70,14 +74,28 @@
             text-align: center;
             border: 3px solid black;
             padding: 20px;
-            border-radius: 20px 20px 20px 20px
+            border-radius: 20px 20px 20px 20px;
+            animation-duration: 1.5s;
+            animation-name: slidein;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-top: 60%;
+                width: 50%;
+            }
+
+            to {
+                margin-top: 10%;
+                width: 50%;
+            }
         }
 
         .characters{
             font-size: 18px;
             text-align: left;
             padding-left: 280px;
-            border: 3px solid black;
+            border: 0px solid black;
         }
 
         #error{
