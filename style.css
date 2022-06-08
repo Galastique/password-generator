@@ -1,3 +1,4 @@
+/*Global*/
 html{
     font-family: Gadugi;
     font-weight: bold;
@@ -9,6 +10,7 @@ h1{
     font-size: 38px;
 }
 
+/*Classes*/
 .center{
     background-color:rgb(100, 20, 160);
     width: 40%;
@@ -19,20 +21,8 @@ h1{
     border: 3px solid black;
     padding: 20px;
     border-radius: 20px 20px 20px 20px;
-    animation-duration: 1.5s;
     animation-name: slidein;
-}
-
-@keyframes slidein {
-    from {
-        margin-top: 60%;
-        width: 40%;
-    }
-
-    to {
-        margin-top: 10%;
-        width: 40%;
-    }
+    animation-duration: 2s;
 }
 
 .characters{
@@ -42,6 +32,7 @@ h1{
     border: 0px solid black;
 }
 
+/*IDs*/
 #error{
     font-size: 24px;
     color: rgb(180, 0, 0);
@@ -71,4 +62,48 @@ h1{
 #button{
     font-family: Gadugi;
     font-weight: bold;
+}
+
+#password{
+    font-family: Gadugi;
+    font-weight: bold;
+}
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
+    animation-name: fadein;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+
+#length{
+    width: 64px;
+}
+
+/*Animations*/
+@keyframes slidein{
+    from {
+        margin-top: 60%;
+        width: 40%;
+    }
+
+    to {
+        margin-top: 10%;
+        width: 40%;
+    }
+}
+
+@keyframes fadein{
+    from {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        color: rgba(0, 0, 0, 1);
+    }
 }
