@@ -13,49 +13,56 @@
             <h1>Password Generator</h1>
 
             <div class="characters">
-                <div class="length">
-                    <label for="length">Password length: </label>
+
+                <div class="length" class="options">
+                    <label>Password length: </label>
                     <input type="text" id="length" placeholder="Type here" value="">
                 </div>
 
-                <div class="letters">
-                    <label for="letters">Contains letters: </label>
-                    <select id="letters">
+                <div class="letters" class="options">
+                    <label>Contains letters: </label>
+                    <select id="letters" id="select">
                         <option value="choose" selected disabled hidden>Select</option>
-                        <option value="lower">Lowercase</option>
-                        <option value="upper">Uppercase</option>
+                        <option value="lower">Lower</option>
+                        <option value="upper">Upper</option>
                         <option value="both">Both</option>
-                        <option value="none">Neither</option>
+                        <option value="none">None</option>
                     </select>
                 </div>
 
-                <div class="numbers">
-                    <label for="numbers">Contains numbers: </label>
-                    <select id="numbers">
+                <div class="numbers" class="options">
+                    <label>Contains numbers: </label>
+                    <select id="numbers" id="select">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
                     </select>
                 </div>
 
-                <div class="special">
-                    <label for="special">Contains special characters: </label>
-                    <select id="special">
+                <div class="special" class="options">
+                    <label>Contains special characters: </label>
+                    <select id="special" id="select">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
                     </select>
                 </div>
             </div>
-            <p id="error"></p>
+
+            <br>
+
             <button id="button" onclick="getValues()">Generate password</button>
-            
             <input type="text" id="password" placeholder="">
 
         </div>
+        
+        <p id="error"></p>
+
     </body>
-    <footer id="footer">
+    
+    <footer>
         <p>Made by Galastique - 06/2022</p>
     </footer>
+
     <script src="generator.js"></script>
 </html>

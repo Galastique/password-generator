@@ -65,7 +65,7 @@ function getValues(){
     //Proceeds if no errors are found
     if(error == ""){
         document.getElementById("error").innerText = "";
-        generate(chars, length);
+        generate(chars, Math.floor(length));
     }else{
         document.getElementById("error").innerText = error;
     }

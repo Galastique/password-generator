@@ -9,8 +9,23 @@ body{
     background-color: rgb(60, 60, 60);
 }
 
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
+    animation: fadeIn 4s 4s, stayIn 100000s 6s;
+}
+
 h1{
     font-size: 38px;
+}
+
+select{
+    float: right;
+    width: 64px;
 }
 
 
@@ -31,30 +46,28 @@ h1{
 
 .characters{
     font-size: 18px;
-    text-align: left;
-    padding-left: 225px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 20%;
+    margin-right: 20%;
     border: 0px solid black;
+}
+
+.options{
+    margin: auto;
+    width: 90%;
 }
 
 
 /*IDs*/
 #error{
-    font-size: 24px;
-    color: rgb(180, 0, 0);
-    -webkit-text-stroke: 0.8px black;
-}
-
-#footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: rgba(0, 0, 0, 0);
-    animation: fadeIn 4s 2s, stayIn 100000s 6s;
+    font-size: 20px;
+    color: rgb(0, 180, 0);
+    -webkit-text-stroke: 0.1px black;
 }
 
 #length{
+    float: right;
     width: 64px;
 }
 
