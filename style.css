@@ -2,6 +2,7 @@
 html *{
     font-family: Gadugi !important;
     font-weight: bold !important;
+    border-radius: 8px 8px 8px 8px;
 }
 
 body{
@@ -9,9 +10,9 @@ body{
 }
 
 h1{
-    font-family: Gadugi;
     font-size: 38px;
 }
+
 
 /*Classes*/
 .center{
@@ -24,7 +25,7 @@ h1{
     border: 3px solid black;
     padding: 20px;
     border-radius: 20px 20px 20px 20px;
-    animation-name: slidein;
+    animation-name: slideIn;
     animation-duration: 2s;
 }
 
@@ -34,6 +35,7 @@ h1{
     padding-left: 225px;
     border: 0px solid black;
 }
+
 
 /*IDs*/
 #error{
@@ -49,17 +51,16 @@ h1{
     width: 100%;
     text-align: center;
     color: rgba(0, 0, 0, 0);
-    animation-name: fadein;
-    animation-delay: 2s;
-    animation-duration: 4s;
+    animation: fadeIn 4s 2s, stayIn 100000s 6s;
 }
 
 #length{
     width: 64px;
 }
 
+
 /*Animations*/
-@keyframes slidein{
+@keyframes slideIn{
     from {
         margin-top: 60%;
         width: 40%;
@@ -71,9 +72,19 @@ h1{
     }
 }
 
-@keyframes fadein{
+@keyframes fadeIn{
     from {
         color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        color: rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes stayIn{
+    from {
+        color: rgba(0, 0, 0, 1);
     }
 
     to {
