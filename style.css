@@ -16,7 +16,7 @@ footer{
     width: 100%;
     text-align: center;
     color: rgba(0, 0, 0, 0);
-    animation: fadeIn 4s 4s, stayIn 100000s 6s;
+    animation: footerFadeIn 4s 4s, footerStayIn 100000s 6s;
 }
 
 h1{
@@ -40,7 +40,7 @@ select{
     border: 3px solid black;
     padding: 20px;
     border-radius: 20px 20px 20px 20px;
-    animation-name: slideIn;
+    animation-name: boxSlideIn;
     animation-duration: 2s;
 }
 
@@ -66,8 +66,12 @@ select{
     border: 2px rgb(0, 180, 0);
 }
 
-.fade{
-    animation: fadeOut 6s;
+.fadeIn{
+    animation: errorFadeIn 0s;
+}
+
+.fadeOut{
+    animation: errorFadeOut 6s;
 }
 
 
@@ -75,7 +79,6 @@ select{
 #error{
     font-size: 20px;
     color: rgba(0, 180, 0, 0);
-    -webkit-text-stroke: 0.1px argb(0, 0, 0, 0);
 }
 
 #length{
@@ -85,39 +88,49 @@ select{
 
 
 /*Animations*/
-@keyframes slideIn{
-    from {
+@keyframes boxSlideIn{
+    0% {
         margin-top: 60%;
         width: 40%;
     }
 
-    to {
+    100% {
         margin-top: 10%;
         width: 40%;
     }
 }
 
-@keyframes fadeIn{
-    from {
+@keyframes footerFadeIn{
+    0% {
         color: rgba(0, 0, 0, 0);
     }
 
-    to {
+    100% {
         color: rgba(0, 0, 0, 1);
     }
 }
 
-@keyframes stayIn{
-    from {
+@keyframes footerStayIn{
+    0% {
         color: rgba(0, 0, 0, 1);
     }
 
-    to {
+    100% {
         color: rgba(0, 0, 0, 1);
     }
 }
 
-@keyframes fadeOut{
+@keyframes errorFadeIn{
+    0% {
+        color: rgba(0, 180, 0, 0);
+    }
+
+    100% {
+        color: rgba(0, 180, 0, 1);
+    }
+}
+
+@keyframes errorFadeOut{
     from {
         color: rgba(0, 180, 0, 1);
     }
@@ -126,3 +139,6 @@ select{
         color: rgba(0, 180, 0, 0);
     }
 }
+
+/*Animate buttons please thank you https://www.w3schools.com/howto/howto_css_animate_buttons.asp
+or maybe this one idk https://freefrontend.com/css-button-click-effects/*/

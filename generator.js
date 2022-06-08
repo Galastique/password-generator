@@ -83,9 +83,6 @@ function generate(chars, length){
 
 //Error message fade out animation
 function animate(){
-    document.getElementById("error").classList.toggle("fade");
-
-    setTimeout(function(){
-        document.getElementById("error").classList.remove("fade");
-    }, 6000);
+    document.getElementById("error").classList.add("fadeOut");
+    document.getElementById("error").classList.remove("fadeOut");
 }
