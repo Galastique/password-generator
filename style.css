@@ -58,6 +58,14 @@ select{
     width: 90%;
 }
 
+.error{
+    width: 40%;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px rgb(0, 180, 0);
+}
+
 
 /*IDs*/
 #error{
