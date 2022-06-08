@@ -66,12 +66,16 @@ select{
     border: 2px rgb(0, 180, 0);
 }
 
+.fade{
+    animation: fadeOut 6s;
+}
+
 
 /*IDs*/
 #error{
     font-size: 20px;
-    color: rgb(0, 180, 0);
-    -webkit-text-stroke: 0.1px black;
+    color: rgba(0, 180, 0, 0);
+    -webkit-text-stroke: 0.1px argb(0, 0, 0, 0);
 }
 
 #length{
@@ -110,5 +114,15 @@ select{
 
     to {
         color: rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes fadeOut{
+    from {
+        color: rgba(0, 180, 0, 1);
+    }
+
+    to {
+        color: rgba(0, 180, 0, 0);
     }
 }

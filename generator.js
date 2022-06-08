@@ -68,6 +68,7 @@ function getValues(){
         generate(chars, Math.floor(length));
     }else{
         document.getElementById("error").innerText = error;
+        animate();
     }
 }
 
@@ -80,4 +81,11 @@ function generate(chars, length){
     document.getElementById("password").value = password;
 }
 
-console.log(chars);
+//Error message fade out animation
+function animate(){
+    document.getElementById("error").classList.toggle("fade");
+
+    setTimeout(function(){
+        document.getElementById("error").classList.remove("fade");
+    }, 6000);
+}
