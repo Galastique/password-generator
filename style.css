@@ -1,0 +1,74 @@
+html{
+    font-family: Gadugi;
+    font-weight: bold;
+    background-color: rgb(60, 60, 60);
+}
+
+h1{
+    font-family: Gadugi;
+    font-size: 38px;
+}
+
+.center{
+    background-color:rgb(100, 20, 160);
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    vertical-align: middle;
+    text-align: center;
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 20px 20px 20px 20px;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 60%;
+        width: 40%;
+    }
+
+    to {
+        margin-top: 10%;
+        width: 40%;
+    }
+}
+
+.characters{
+    font-size: 18px;
+    text-align: left;
+    padding-left: 225px;
+    border: 0px solid black;
+}
+
+#error{
+    font-size: 24px;
+    color: rgb(180, 0, 0);
+    -webkit-text-stroke: 0.8px black;
+}
+
+#length{
+    font-family: Gadugi;
+    font-weight: bold;
+}
+
+#letters{
+    font-family: Gadugi;
+    font-weight: bold;
+}
+
+#numbers{
+    font-family: Gadugi;
+    font-weight: bold;
+}
+
+#special{
+    font-family: Gadugi;
+    font-weight: bold;
+}
+
+#button{
+    font-family: Gadugi;
+    font-weight: bold;
+}
