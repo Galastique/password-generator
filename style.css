@@ -71,6 +71,7 @@ select{
 }
 
 .fadeOut{
+    animation-play-state: initial;
     animation: errorFadeOut 6s;
 }
 
