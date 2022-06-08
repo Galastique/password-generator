@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <title>Password Generator</title>
-    <link rel="icon" href="./icon.png">
     <head>
-        
+        <title>Password Generator</title>
+        <meta name="description" content="User friendly password generator">
+        <meta name="author" content="Galastique">
+        <meta charset="UTF-8">
+        <link rel="icon" href="./icon.png">
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body style="background-color:blue;">
+    <body>
         <div class="center">
             <h1>Password Generator</h1>
 
@@ -52,79 +55,7 @@
         </div>
     </body>
     <footer>
-
+        <p>Made by Galastique 06/2022</p>
     </footer>
-    <style>
-        html{
-            font-family: Gadugi;
-            font-weight: bold;
-        }
-
-        h1{
-            font-family: Gadugi;
-            font-size: 38px;
-        }
-
-        .center{
-            background-color:rgb(200, 40, 220);
-            width: 50%;
-            margin: auto;
-            margin-top: 10%;
-            vertical-align: middle;
-            text-align: center;
-            border: 3px solid black;
-            padding: 20px;
-            border-radius: 20px 20px 20px 20px;
-            animation-duration: 1.5s;
-            animation-name: slidein;
-        }
-
-        @keyframes slidein {
-            from {
-                margin-top: 60%;
-                width: 50%;
-            }
-
-            to {
-                margin-top: 10%;
-                width: 50%;
-            }
-        }
-
-        .characters{
-            font-size: 18px;
-            text-align: left;
-            padding-left: 280px;
-            border: 0px solid black;
-        }
-
-        #error{
-            font-size: 24px;
-            color: darkred;
-        }
-
-        #length{
-            font-family: Gadugi;
-        }
-
-        #letters{
-            font-family: Gadugi;
-        }
-
-        #numbers{
-            font-family: Gadugi;
-        }
-
-        #special{
-            font-family: Gadugi;
-        }
-
-        #button{
-            font-family: Gadugi;
-        }
-
-    </style>
-    <script src="generator.js">
-
-    </script>
+    <script src="generator.js"></script>
 </html>
