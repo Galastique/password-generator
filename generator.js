@@ -26,9 +26,9 @@ function getValues(){
     }else if(length == ""){
         error += "You must enter a password length\n";
     }else if(length < 10){
-        error += "You must select a password longer than 10 characters\n";
+        error += "Your password must be at least 10 characters long\n";
     }else if(length > 80){
-        error += "You must select a password shorter than 80 characters\n";
+        error += "Your password must not be longer than 80 characters\n";
     }
 
     //Letters
