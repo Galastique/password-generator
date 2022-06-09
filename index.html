@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="generator.js"></script>
     </head>
-    <body>
+    <body onmouseleave="leaving()">
         <div class="center">
             <h1>Password Generator</h1>
 
@@ -22,7 +22,7 @@
 
                 <div class="letters">
                     <label>Contains letters: </label>
-                    <select id="letters" id="select">
+                    <select id="letters">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="lower">Lower</option>
                         <option value="upper">Upper</option>
@@ -33,7 +33,7 @@
 
                 <div class="numbers">
                     <label>Contains numbers: </label>
-                    <select id="numbers" id="select">
+                    <select id="numbers">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -42,15 +42,13 @@
 
                 <div class="special">
                     <label>Contains special characters: </label>
-                    <select id="special" id="select">
+                    <select id="special">
                         <option value="choose" selected disabled hidden>Select</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
                     </select>
                 </div>
             </div>
-
-            <br>
 
             <div class="result">
                 <button id="button" onclick="getValues()">Generate password</button>

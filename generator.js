@@ -2,6 +2,8 @@
 let letters = "abcdefghijklmnopqrstuvwxyz";
 let numbers = "0123456789";
 let special = "!@#$%^&*()-_=+`~[{]};:'\",<.>/?\\|";
+let generated = false;
+let copied = false;
 
 //Generates string of every character to use in generation
 function getValues(){
@@ -79,19 +81,28 @@ function generate(chars, length){
         password += chars.charAt(Math.random() * chars.length);
     }
     document.getElementById("password").value = password;
+    generated = true;
+    copied = false;
 }
 
 //Copies password to clipboard
 function copy(){
+    //Does not copy if password hasnt been generated
+    if(!generated){
+        return
+    }
+
+    //Copies password
     let copyText = document.getElementById("password");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
     
+    //Displays confirmation
     let tooltip = document.getElementById("success");
     tooltip.innerHTML = "Password copied successfully!";
-
     successAnimate();
+    copied = true;
 }
 
 //Error message fade out animation
@@ -110,4 +121,11 @@ function successAnimate(){
     setTimeout(function(){
         document.getElementById("success").classList.add("successFadeOut");
     }, 5);
+}
+
+//Asks user if they want to leave if they havent copied their password yet
+function leaving(){
+    if(generated && !copied){
+        alert("You haven't copied your generated password. Are you sure you would like to leave?");
+    }
 }
