@@ -100,7 +100,7 @@ function copy(){
     
     //Displays confirmation
     let tooltip = document.getElementById("success");
-    tooltip.innerHTML = "Password copied successfully!";
+    tooltip.innerHTML = "Password copied to clipboard successfully!";
     successAnimate();
     copied = true;
 }
