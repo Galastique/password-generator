@@ -26,6 +26,7 @@ h1{
 select{
     float: right;
     width: 64px;
+    text-align: center;
 }
 
 input{
@@ -90,6 +91,7 @@ input{
 
 .result{
     position: relative;
+    margin-top: 5%;
 }
 
 
@@ -106,14 +108,10 @@ input{
     bottom:0;
 }
 
-#length, #letters, #numbers, #special{
-    float: right;
-    width: 64px;
-    text-align: center;
-}
-
 #length{
+    float: right;
     width: 24px;
+    text-align: center;
 }
 
 
