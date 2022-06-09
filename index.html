@@ -13,14 +13,14 @@
         <div class="center">
             <h1>Password Generator</h1>
 
-            <div class="characters">
+            <div class="characters" class="options">
 
-                <div class="length" class="options">
+                <div class="length">
                     <label>Password length: </label>
-                    <input type="text" id="length" placeholder="Type here" value="">
+                    <input type="text" id="length" placeholder="40" value="">
                 </div>
 
-                <div class="letters" class="options">
+                <div class="letters">
                     <label>Contains letters: </label>
                     <select id="letters" id="select">
                         <option value="choose" selected disabled hidden>Select</option>
@@ -31,7 +31,7 @@
                     </select>
                 </div>
 
-                <div class="numbers" class="options">
+                <div class="numbers">
                     <label>Contains numbers: </label>
                     <select id="numbers" id="select">
                         <option value="choose" selected disabled hidden>Select</option>
@@ -40,7 +40,7 @@
                     </select>
                 </div>
 
-                <div class="special" class="options">
+                <div class="special">
                     <label>Contains special characters: </label>
                     <select id="special" id="select">
                         <option value="choose" selected disabled hidden>Select</option>
@@ -54,7 +54,7 @@
 
             <div class="result">
                 <button id="button" onclick="getValues()">Generate password</button>
-                <input type="password" id="password" placeholder="">
+                <input type="password" id="password" placeholder="" disabled>
                 <img src="copy.png" alt="copy to clipboard" width="24" height="24" id="copy" onclick="copy()">
             </div>
 
