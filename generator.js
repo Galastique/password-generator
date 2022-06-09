@@ -68,7 +68,7 @@ function getValues(){
         generate(chars, Math.floor(length));
     }else{
         document.getElementById("error").innerText = error;
-        animate();
+        errorAnimate();
     }
 }
 
@@ -81,7 +81,33 @@ function generate(chars, length){
     document.getElementById("password").value = password;
 }
 
+//Copies password to clipboard
+function copy(){
+    let copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    
+    let tooltip = document.getElementById("success");
+    tooltip.innerHTML = "Password copied successfully!";
+
+    successAnimate();
+}
+
 //Error message fade out animation
-function animate(){
-    document.getElementById("error").classList.add("fadeOut");
+function errorAnimate(){
+    document.getElementById("error").classList.remove("errorFadeOut");
+
+    setTimeout(function(){
+        document.getElementById("error").classList.add("errorFadeOut");
+    }, 5);
+}
+
+//Success message fade out animation
+function successAnimate(){
+    document.getElementById("success").classList.remove("successFadeOut");
+
+    setTimeout(function(){
+        document.getElementById("success").classList.add("successFadeOut");
+    }, 5);
 }
