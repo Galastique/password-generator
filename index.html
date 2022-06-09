@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <link rel="icon" href="./icon.png">
         <link rel="stylesheet" href="style.css">
+        <script src="generator.js"></script>
     </head>
     <body>
         <div class="center">
@@ -51,13 +52,20 @@
 
             <br>
 
-            <button id="button" onclick="getValues()">Generate password</button>
-            <input type="text" id="password" placeholder="">
+            <div class="result">
+                <button id="button" onclick="getValues()">Generate password</button>
+                <input type="password" id="password" placeholder="">
+                <img src="copy.png" alt="copy to clipboard" width="24" height="24" id="copy" onclick="copy()">
+            </div>
 
         </div>
         
         <div class="error">
             <p id="error"></p>
+        </div>
+
+        <div class="success">
+            <p id="success"></p>
         </div>
 
     </body>
@@ -66,5 +74,4 @@
         <p>Made by Galastique - 06/2022</p>
     </footer>
 
-    <script src="generator.js"></script>
 </html>
