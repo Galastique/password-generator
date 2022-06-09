@@ -32,7 +32,7 @@ select{
 /*Classes*/
 .center{
     background-color:rgb(100, 20, 160);
-    width: 40%;
+    width: 592px;
     margin: auto;
     margin-top: 10%;
     vertical-align: middle;
@@ -63,23 +63,42 @@ select{
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    border: 2px rgb(0, 180, 0);
+    font-size: 20px;
+    color: rgba(0, 180, 0, 0);
 }
 
-.fadeIn{
-    animation: errorFadeIn 0s;
+.success{
+    width: 40%;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
 }
 
-.fadeOut{
-    animation-play-state: initial;
+.errorFadeOut{
     animation: errorFadeOut 6s;
+}
+
+.successFadeOut{
+    animation: successFadeOut 6s;
+}
+
+.result{
+    position: relative;
 }
 
 
 /*IDs*/
-#error{
-    font-size: 20px;
-    color: rgba(0, 180, 0, 0);
+#password{
+    word-wrap: break-word;
+    word-break: break-all;
+    pointer-events: none;
+}
+
+#copy{
+    padding-top: 10px;
+    position:absolute; 
+    bottom:0;
 }
 
 #length{
@@ -121,16 +140,6 @@ select{
     }
 }
 
-@keyframes errorFadeIn{
-    0% {
-        color: rgba(0, 180, 0, 0);
-    }
-
-    100% {
-        color: rgba(0, 180, 0, 1);
-    }
-}
-
 @keyframes errorFadeOut{
     from {
         color: rgba(0, 180, 0, 1);
@@ -138,6 +147,16 @@ select{
 
     to {
         color: rgba(0, 180, 0, 0);
+    }
+}
+
+@keyframes successFadeOut{
+    from {
+        color: rgba(0, 0, 0, 1);
+    }
+
+    to {
+        color: rgba(0, 0, 0, 0);
     }
 }
 
