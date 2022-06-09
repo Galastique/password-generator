@@ -28,6 +28,11 @@ select{
     width: 64px;
 }
 
+input{
+    background: #FFFFFF; 
+    color: #000000;
+}
+
 
 /*Classes*/
 .center{
@@ -92,18 +97,23 @@ select{
 #password{
     word-wrap: break-word;
     word-break: break-all;
-    pointer-events: none;
 }
 
 #copy{
     padding-top: 10px;
+    padding-left: 2px;
     position:absolute; 
     bottom:0;
 }
 
-#length{
+#length, #letters, #numbers, #special{
     float: right;
     width: 64px;
+    text-align: center;
+}
+
+#length{
+    width: 24px;
 }
 
 
