@@ -70,7 +70,7 @@ function getValues(){
         generate(chars, Math.floor(length));
     }else{
         document.getElementById("error").innerText = error;
-        errorAnimate();
+        animate("error");
     }
 }
 
@@ -101,25 +101,16 @@ function copy(){
     //Displays confirmation
     let tooltip = document.getElementById("success");
     tooltip.innerHTML = "Password copied to clipboard successfully!";
-    successAnimate();
+    animate("success");
     copied = true;
 }
 
 //Error message fade out animation
-function errorAnimate(){
-    document.getElementById("error").classList.remove("errorFadeOut");
+function animate(field){
+    document.getElementById(field).classList.remove("fadeOut");
 
     setTimeout(function(){
-        document.getElementById("error").classList.add("errorFadeOut");
-    }, 1);
-}
-
-//Success message fade out animation
-function successAnimate(){
-    document.getElementById("success").classList.remove("successFadeOut");
-
-    setTimeout(function(){
-        document.getElementById("success").classList.add("successFadeOut");
+        document.getElementById(field).classList.add("fadeOut");
     }, 1);
 }
 
