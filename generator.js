@@ -121,14 +121,13 @@ function leaving(){
     }
 }
 
-//
-let visible = false;
+//Toggle password visibility
 function view(){
-    if(!visible){
+    let visible = document.getElementById("password").type;
+
+    if(generated && visible == "password"){
         document.getElementById("password").type = "text";
-        visible = true;
     }else{
         document.getElementById("password").type = "password";
-        visible = false;
     }
 }
