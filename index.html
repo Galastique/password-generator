@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html onmouseleave="leaving()">
+
     <head>
         <title>Password Generator</title>
         <meta name="description" content="User friendly password generator">
@@ -9,11 +10,13 @@
         <link rel="stylesheet" href="style.css">
         <script src="generator.js"></script>
     </head>
+
     <body>
-        <div class="center">
+        <div class="box">
+
             <h1>Password Generator</h1>
 
-            <div class="characters" class="options">
+            <div class="options">
 
                 <div class="length">
                     <label>Password length: </label>
@@ -48,12 +51,13 @@
                         <option value="false">No</option>
                     </select>
                 </div>
+
             </div>
 
             <div class="result">
                 <button id="button" onclick="getValues()">Generate password</button>
-                <input type="password" id="password" placeholder="" disabled>
-                <img src="copy.png" alt="copy to clipboard" width="24" height="24" id="copy" onclick="copy()">
+                <input type="password" id="password" disabled>
+                <img src="copy.png" id="copy" onclick="copy()">
             </div>
 
         </div>
@@ -65,7 +69,7 @@
         <div class="success">
             <p id="success"></p>
         </div>
-
+        
     </body>
 
     <footer>

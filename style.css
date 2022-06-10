@@ -19,10 +19,6 @@ footer{
     animation: footerFadeIn 8s;
 }
 
-h1{
-    font-size: 38px;
-}
-
 select{
     float: right;
     width: 64px;
@@ -32,6 +28,10 @@ select{
 input{
     background: #FFFFFF; 
     color: #000000;
+}
+
+h1{
+    font-size: 38px;
 }
 
 
@@ -58,13 +58,18 @@ input{
     border: 0px solid black;
 }
 
+.result{
+    position: relative;
+    margin-top: 5%;
+}
+
 .error{
     width: 40%;
     margin: auto;
     vertical-align: middle;
     text-align: center;
     font-size: 20px;
-    color: rgba(0, 180, 0)
+    color: rgba(0, 180, 0);
 }
 
 .success{
@@ -75,37 +80,26 @@ input{
     color: rgba(0, 0, 0);
 }
 
-.errorFadeOut{
-    animation: errorFadeOut 6s;
-}
-
-.successFadeOut{
-    animation: successFadeOut 6s;
-}
-
-.result{
-    position: relative;
-    margin-top: 5%;
+.fadeOut{
+    animation: fadeOut 6s;
+    animation-fill-mode: forwards;
 }
 
 
 /*IDs*/
-#password{
-    word-wrap: break-word;
-    word-break: break-all;
-}
-
-#copy{
-    padding-top: 10px;
-    padding-left: 2px;
-    position:absolute; 
-    bottom:0;
-}
-
 #length{
     float: right;
     width: 24px;
     text-align: center;
+}
+
+#copy{
+    width: 24px;
+    height: 24px;
+    padding-top: 10px;
+    padding-left: 2px;
+    position: absolute; 
+    bottom: 0px;
 }
 
 
@@ -122,7 +116,7 @@ input{
     }
 }
 
-@keyframes errorFadeOut{
+@keyframes fadeOut{
     0% {
         opacity: 1;
     }
@@ -137,16 +131,6 @@ input{
 
     100% {
         opacity: 0;
-    }
-}
-
-@keyframes successFadeOut{
-    from {
-        color: rgba(0, 0, 0, 1);
-    }
-
-    to {
-        color: rgba(0, 0, 0, 0);
     }
 }
 
