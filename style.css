@@ -34,6 +34,14 @@ h1{
     font-size: 38px;
 }
 
+img {
+    width: 24px;
+    height: 24px;
+    padding-top: 10px;
+    position: absolute; 
+    bottom: 0px;
+}
+
 
 /*Classes*/
 .box{
@@ -93,13 +101,12 @@ h1{
     text-align: center;
 }
 
-#copy{
-    width: 24px;
-    height: 24px;
-    padding-top: 10px;
+#copy {
     padding-left: 2px;
-    position: absolute; 
-    bottom: 0px;
+}
+
+#view {
+    padding-left: 26px;
 }
 
 

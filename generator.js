@@ -120,3 +120,15 @@ function leaving(){
         alert("You haven't copied your generated password. Are you sure you would like to leave?");
     }
 }
+
+//
+let visible = false;
+function view(){
+    if(!visible){
+        document.getElementById("password").type = "text";
+        visible = true;
+    }else{
+        document.getElementById("password").type = "password";
+        visible = false;
+    }
+}
