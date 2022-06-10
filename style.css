@@ -21,7 +21,7 @@ footer{
 
 select{
     float: right;
-    width: 64px;
+    width: 20%;
     text-align: center;
 }
 
@@ -31,13 +31,12 @@ input{
 }
 
 h1{
-    font-size: 38px;
+    font-size: 240%;
 }
 
 img {
-    width: 24px;
-    height: 24px;
-    padding-top: 10px;
+    width: 4.8%;
+    padding-top: 0.75%;
     position: absolute; 
     bottom: 0px;
 }
@@ -46,24 +45,23 @@ img {
 /*Classes*/
 .box{
     background-color:rgb(100, 20, 160);
-    width: 592px;
+    width: 35%;
     margin: auto;
     margin-top: 10%;
     vertical-align: middle;
     text-align: center;
     border: 3px solid black;
-    padding: 20px;
+    padding: 1.5%;
     border-radius: 20px 20px 20px 20px;
     animation: boxSlideIn 2s;
 }
 
 .options{
-    font-size: 18px;
+    font-size: 110%;
     text-align: justify;
     text-justify: inter-word;
     margin-left: 20%;
     margin-right: 20%;
-    border: 0px solid black;
 }
 
 .result{
@@ -76,8 +74,8 @@ img {
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    font-size: 20px;
-    color: rgba(0, 180, 0);
+    font-size: 140%;
+    color: rgb(0, 180, 0);
 }
 
 .success{
@@ -85,7 +83,7 @@ img {
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    color: rgba(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .fadeOut{
@@ -97,16 +95,16 @@ img {
 /*IDs*/
 #length{
     float: right;
-    width: 24px;
+    width: 8%;
     text-align: center;
 }
 
 #copy {
-    padding-left: 2px;
+    padding-left: 0.4%;
 }
 
 #view {
-    padding-left: 26px;
+    padding-left: 5.2%;
 }
 
 
@@ -114,12 +112,12 @@ img {
 @keyframes boxSlideIn{
     0% {
         margin-top: 60%;
-        width: 592px;
+        width: 35%;
     }
 
     100% {
         margin-top: 10%;
-        width: 592px;
+        width: 35%;
     }
 }
 
