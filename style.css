@@ -107,12 +107,12 @@ h1{
 @keyframes boxSlideIn{
     0% {
         margin-top: 60%;
-        width: 40%;
+        width: 592px;
     }
 
     100% {
         margin-top: 10%;
-        width: 40%;
+        width: 592px;
     }
 }
 
