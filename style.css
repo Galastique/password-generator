@@ -15,8 +15,8 @@ footer{
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: rgba(0, 0, 0, 0);
-    animation: footerFadeIn 4s 4s, footerStayIn 100000s 6s;
+    color: rgb(0, 0, 0);
+    animation: footerFadeIn 8s;
 }
 
 h1{
@@ -36,7 +36,7 @@ input{
 
 
 /*Classes*/
-.center{
+.box{
     background-color:rgb(100, 20, 160);
     width: 592px;
     margin: auto;
@@ -46,11 +46,10 @@ input{
     border: 3px solid black;
     padding: 20px;
     border-radius: 20px 20px 20px 20px;
-    animation-name: boxSlideIn;
-    animation-duration: 2s;
+    animation: boxSlideIn 2s;
 }
 
-.characters{
+.options{
     font-size: 18px;
     text-align: justify;
     text-justify: inter-word;
@@ -59,18 +58,13 @@ input{
     border: 0px solid black;
 }
 
-.options{
-    margin: auto;
-    width: 90%;
-}
-
 .error{
     width: 40%;
     margin: auto;
     vertical-align: middle;
     text-align: center;
     font-size: 20px;
-    color: rgba(0, 180, 0, 0);
+    color: rgba(0, 180, 0)
 }
 
 .success{
@@ -78,7 +72,7 @@ input{
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0);
 }
 
 .errorFadeOut{
@@ -119,42 +113,30 @@ input{
 @keyframes boxSlideIn{
     0% {
         margin-top: 60%;
-        width: 592px;
+        width: 40%;
     }
 
     100% {
         margin-top: 10%;
-        width: 592px;
-    }
-}
-
-@keyframes footerFadeIn{
-    0% {
-        color: rgba(0, 0, 0, 0);
-    }
-
-    100% {
-        color: rgba(0, 0, 0, 1);
-    }
-}
-
-@keyframes footerStayIn{
-    0% {
-        color: rgba(0, 0, 0, 1);
-    }
-
-    100% {
-        color: rgba(0, 0, 0, 1);
+        width: 40%;
     }
 }
 
 @keyframes errorFadeOut{
-    from {
-        color: rgba(0, 180, 0, 1);
+    0% {
+        opacity: 1;
     }
 
-    to {
-        color: rgba(0, 180, 0, 0);
+    33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -165,6 +147,20 @@ input{
 
     to {
         color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes footerFadeIn{
+    0% {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        color: rgba(0, 0, 0, 1);
     }
 }
 
