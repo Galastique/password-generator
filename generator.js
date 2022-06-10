@@ -111,7 +111,7 @@ function errorAnimate(){
 
     setTimeout(function(){
         document.getElementById("error").classList.add("errorFadeOut");
-    }, 5);
+    }, 1);
 }
 
 //Success message fade out animation
@@ -120,7 +120,7 @@ function successAnimate(){
 
     setTimeout(function(){
         document.getElementById("success").classList.add("successFadeOut");
-    }, 5);
+    }, 1);
 }
 
 //Asks user if they want to leave if they havent copied their password yet
