@@ -46,7 +46,8 @@ img {
 .box{
     background-color:rgb(100, 20, 160);
     width: 35%;
-    margin: auto;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 10%;
     vertical-align: middle;
     text-align: center;
@@ -60,8 +61,8 @@ img {
     font-size: 110%;
     text-align: justify;
     text-justify: inter-word;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 18%;
+    margin-right: 18%;
 }
 
 .result{

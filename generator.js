@@ -2,6 +2,7 @@
 let letters = "abcdefghijklmnopqrstuvwxyz";
 let numbers = "0123456789";
 let special = "!@#$%^&*()-_=+`~[{]};:'\",<.>/?\\|";
+let easy = "Il1|O0'`\";:,.";
 let generated = false;
 let copied = false;
 
@@ -14,12 +15,14 @@ function getValues(){
     let l;
     let n;
     let s;
+    let e;
 
     //Gets values
     length = document.getElementById("length").value;
     l = document.getElementById("letters").value;
     n = document.getElementById("numbers").value;
     s = document.getElementById("special").value;
+    e = document.getElementById("easy").value;
 
     //Generates characters included in password + error codes
     //Length
@@ -59,9 +62,22 @@ function getValues(){
         error += "You must select an option for special characters\n";
     }
 
+    //Easy
+    if(e == "true"){
+        for(let i = 0; i < chars.length; i++){
+            for(let j = 0; j < easy.length; j++){
+                if(chars.charAt(i) == easy.charAt(j)){
+                    chars.replace(chars.charAt(i), "");
+                }
+            }
+        }
+    }else if(e == "choose"){
+        error += "You must select an option for readability\n";
+    }
+
     //Other
     if(l == "none" && n == "false" && s == "false"){
-        error += "You must choose at least 1 option to generate a password";
+        error += "You must choose at least 1 character option to generate a password";
     }
 
     //Proceeds if no errors are found
