@@ -1,3 +1,4 @@
+/*2160p displays*/
 /*Global*/
 html *{
     font-family: Gadugi !important;
@@ -150,6 +151,79 @@ img {
     }
 }
 
+/*1440p displays*/
+@media only screen and (max-width: 2560px) {
+    /*Global*/
+    html *{
+        border-radius: 12px 12px 12px 12px;
+    }
+
+    select{
+        width: 96px;
+    }
+
+    h1{
+        font-size: 57px;
+    }
+
+    img {
+        width: 36px;
+        height: 36px;
+        padding-top: 15px;
+    }
+
+
+    /*Classes*/
+    .box{
+        width: 888px;
+        margin-top: 270px;
+        border: 4.5px solid black;
+        padding: 30px;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .options{
+        font-size: 27px;
+        margin-left: 165px;
+        margin-right: 165px;
+    }
+
+    .result{
+        margin-top: 30px;
+    }
+
+    .error{
+        font-size: 36px;
+    }
+
+
+    /*IDs*/
+    #length{
+        width: 36px;
+    }
+
+    #copy {
+        padding-left: 3px;
+    }
+
+    #view {
+        padding-left: 39px;
+    }
+
+
+    /*Animations*/
+    @keyframes boxSlideIn{
+        0% {
+            margin-top: 1200px;
+        }
+
+        100% {
+            margin-top: 180px;
+        }
+    }
+}
+
+/*1080p displays*/
 @media only screen and (max-width: 1920px) {
     /*Global*/
     html *{
