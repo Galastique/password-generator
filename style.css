@@ -2,7 +2,7 @@
 html *{
     font-family: Gadugi !important;
     font-weight: bold !important;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 16px 16px 16px 16px;
 }
 
 body{
@@ -21,7 +21,7 @@ footer{
 
 select{
     float: right;
-    width: 64px;
+    width: 128px;
     text-align: center;
 }
 
@@ -31,13 +31,13 @@ input{
 }
 
 h1{
-    font-size: 38px;
+    font-size: 76px;
 }
 
 img {
-    width: 24px;
-    height: 24px;
-    padding-top: 10px;
+    width: 48px;
+    height: 48px;
+    padding-top: 20px;
     position: absolute; 
     bottom: 0px;
 }
@@ -46,35 +46,35 @@ img {
 /*Classes*/
 .box{
     background-color:rgb(120, 40, 180);
-    width: 592px;
+    width: 1184px;
     margin: 0 auto;
-    margin-top: 180px;
+    margin-top: 360px;
     vertical-align: middle;
     text-align: center;
-    border: 3px solid black;
-    padding: 20px;
-    border-radius: 20px 20px 20px 20px;
+    border: 6px solid black;
+    padding: 40px;
+    border-radius: 40px 40px 40px 40px;
     animation: boxSlideIn 2s;
 }
 
 .options{
-    font-size: 18px;
+    font-size: 36px;
     text-align: justify;
     text-justify: inter-word;
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 220px;
+    margin-right: 220px;
 }
 
 .result{
     position: relative;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .error{
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    font-size: 24px;
+    font-size: 48px;
     color: rgb(0, 180, 0);
 }
 
@@ -94,27 +94,27 @@ img {
 /*IDs*/
 #length{
     float: right;
-    width: 24px;
+    width: 48px;
     text-align: center;
 }
 
 #copy {
-    padding-left: 2px;
+    padding-left: 4px;
 }
 
 #view {
-    padding-left: 26px;
+    padding-left: 52px;
 }
 
 
 /*Animations*/
 @keyframes boxSlideIn{
     0% {
-        margin-top: 1200px;
+        margin-top: 2400px;
     }
 
     100% {
-        margin-top: 180px;
+        margin-top: 360px;
     }
 }
 
@@ -150,5 +150,73 @@ img {
     }
 }
 
-/*Animate buttons please thank you https://www.w3schools.com/howto/howto_css_animate_buttons.asp
-or maybe this one idk https://freefrontend.com/css-button-click-effects/*/
+@media only screen and (max-width: 1920px) {
+    /*Global*/
+    html *{
+        border-radius: 8px 8px 8px 8px;
+    }
+
+    select{
+        width: 64px;
+    }
+
+    h1{
+        font-size: 38px;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        padding-top: 10px;
+    }
+
+
+    /*Classes*/
+    .box{
+        width: 592px;
+        margin-top: 180px;
+        border: 3px solid black;
+        padding: 20px;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .options{
+        font-size: 18px;
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    .result{
+        margin-top: 20px;
+    }
+
+    .error{
+        font-size: 24px;
+    }
+
+
+    /*IDs*/
+    #length{
+        width: 24px;
+    }
+
+    #copy {
+        padding-left: 2px;
+    }
+
+    #view {
+        padding-left: 26px;
+    }
+
+
+    /*Animations*/
+    @keyframes boxSlideIn{
+        0% {
+            margin-top: 1200px;
+        }
+
+        100% {
+            margin-top: 180px;
+        }
+    }
+}
