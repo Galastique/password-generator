@@ -69,6 +69,7 @@ input{
 
 h1{
     font-size: calc(38px * var(--scale));
+    cursor: default;
 }
 
 img {
@@ -81,6 +82,10 @@ img {
 
 button, select, input {
     font-size: calc(13px * var(--scale));
+}
+
+button:hover, select:hover, img:hover {
+    cursor: pointer;
 }
 
 input {
