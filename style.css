@@ -1,6 +1,6 @@
 /*Variables to make scaling more user friendly*/
 :root{
-    --scale-HD: 0.66;
+    --scale-HD: 0.8;
     --scale-FHD: 1;
     --scale-QHD: 1.33;
     --scale-UHD: 2;
@@ -39,7 +39,7 @@
 html *{
     font-family: Gadugi !important;
     font-weight: bold !important;
-    border-radius: calc(8px * var(--scale)) calc(8px * var(--scale)) calc(8px * var(--scale)) calc(8px * var(--scale));
+    border-radius: calc(8px * var(--scale)) calc(8px * var(--scale)) calc(6px * var(--scale)) calc(6px * var(--scale));
 }
 
 body{
@@ -58,7 +58,7 @@ footer{
 
 select{
     float: right;
-    width:  calc(64px * var(--scale));
+    width: calc(64px * var(--scale));
     text-align: center;
 }
 
@@ -79,6 +79,13 @@ img {
     bottom: calc(0px * var(--scale));
 }
 
+button, select, input {
+    font-size: calc(13px * var(--scale));
+}
+
+input {
+    height: calc(14px * var(--scale));
+}
 
 /*Classes*/
 .box{
@@ -131,7 +138,8 @@ img {
 /*IDs*/
 #length{
     float: right;
-    width: calc(24px * var(--scale));
+    width: calc(23px * var(--scale));
+    height: calc(16px * var(--scale));
     text-align: center;
 }
 
