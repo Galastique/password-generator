@@ -1,8 +1,8 @@
 //Types of characters to include in password generation
 let letters = "abcdefghijklmnopqrstuvwxyz";
 let numbers = "0123456789";
-let special = "!@#$%^&*()-_=+`~[{]};:'\",<.>/?\\|";
-let easy = "Il1|O0'`\";:,.";
+let special = "!@#$%^&*()-_=+`~[]{};:'\",.?<>/\\|";
+let easy = "Il1|O0'`\";:,.[]{}~^\\";
 let generated = false;
 let copied = false;
 
@@ -67,25 +67,25 @@ function getValues(){
         for(let i = 0; i < chars.length; i++){
             for(let j = 0; j < easy.length; j++){
                 if(chars.charAt(i) == easy.charAt(j)){
-                    chars.replace(chars.charAt(i), "");
+                    chars = chars.substring(0, i) + chars.substring(i + 1, chars.length);
+                    i--;
                 }
             }
         }
     }else if(e == "choose"){
         error += "You must select an option for readability\n";
     }
-
+    
     //Other
     if(l == "none" && n == "false" && s == "false"){
         error += "You must choose at least 1 character option to generate a password";
     }
 
     //Proceeds if no errors are found
+    document.getElementById("error").innerText = error;
     if(error == ""){
-        document.getElementById("error").innerText = "";
         generate(chars, Math.floor(length));
     }else{
-        document.getElementById("error").innerText = error;
         animate("error");
     }
 }
