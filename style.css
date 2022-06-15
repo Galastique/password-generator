@@ -1,9 +1,45 @@
-/*2160p displays*/
+/*Variables to make scaling more user friendly*/
+:root{
+    --scale-HD: 0.66;
+    --scale-FHD: 1;
+    --scale-QHD: 1.33;
+    --scale-UHD: 2;
+    --scale: 1;
+}
+
+/*3840x2160*/
+@media only screen and (max-width: 3840px) {
+    :root{
+        --scale: var(--scale-UHD);
+    }
+}
+
+/*2560x1440*/
+@media only screen and (max-width: 2560px) {
+    :root{
+        --scale: var(--scale-QHD);
+    }
+}
+
+/*1920x1080*/
+@media only screen and (max-width: 1920px) {
+    :root{
+        --scale: var(--scale-FHD);
+    }
+}
+
+/*1280x720*/
+@media only screen and (max-width: 1280px) {
+    :root{
+        --scale: var(--scale-HD);
+    }
+}
+
 /*Global*/
 html *{
     font-family: Gadugi !important;
     font-weight: bold !important;
-    border-radius: 16px 16px 16px 16px;
+    border-radius: calc(8px * var(--scale)) calc(8px * var(--scale)) calc(8px * var(--scale)) calc(8px * var(--scale));
 }
 
 body{
@@ -22,7 +58,7 @@ footer{
 
 select{
     float: right;
-    width: 128px;
+    width:  calc(64px * var(--scale));
     text-align: center;
 }
 
@@ -32,50 +68,50 @@ input{
 }
 
 h1{
-    font-size: 76px;
+    font-size: calc(38px * var(--scale));
 }
 
 img {
-    width: 48px;
-    height: 48px;
-    padding-top: 20px;
+    width: calc(22px * var(--scale));
+    height: calc(22px * var(--scale));
+    padding-top: calc(10px * var(--scale));
     position: absolute; 
-    bottom: 0px;
+    bottom: calc(0px * var(--scale));
 }
 
 
 /*Classes*/
 .box{
     background-color:rgb(120, 40, 180);
-    width: 1184px;
+    width: calc(592px * var(--scale));
     margin: 0 auto;
-    margin-top: 360px;
+    margin-top: calc(180px * var(--scale));
     vertical-align: middle;
     text-align: center;
-    border: 6px solid black;
-    padding: 40px;
-    border-radius: 40px 40px 40px 40px;
+    border: calc(3px * var(--scale)) solid black;
+    padding: calc(20px * var(--scale));
+    border-radius: calc(20px * var(--scale)) calc(20px * var(--scale)) calc(20px * var(--scale)) calc(20px * var(--scale));
     animation: boxSlideIn 2s;
 }
 
 .options{
-    font-size: 36px;
+    font-size: calc(18px * var(--scale));
     text-align: justify;
     text-justify: inter-word;
-    margin-left: 220px;
-    margin-right: 220px;
+    margin-left: calc(110px * var(--scale));
+    margin-right: calc(110px * var(--scale));
 }
 
 .result{
     position: relative;
-    margin-top: 40px;
+    margin-top: calc(20px * var(--scale));
 }
 
 .error{
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    font-size: 48px;
+    font-size: calc(24px * var(--scale));
     color: rgb(0, 180, 0);
 }
 
@@ -95,27 +131,27 @@ img {
 /*IDs*/
 #length{
     float: right;
-    width: 48px;
+    width: calc(24px * var(--scale));
     text-align: center;
 }
 
 #copy {
-    padding-left: 4px;
+    padding-left: calc(2px * var(--scale));
 }
 
 #view {
-    padding-left: 52px;
+    padding-left: calc(26px * var(--scale));
 }
 
 
 /*Animations*/
 @keyframes boxSlideIn{
     0% {
-        margin-top: 2400px;
+        margin-top: calc(1200px * var(--scale));
     }
 
     100% {
-        margin-top: 360px;
+        margin-top: calc(180px * var(--scale));
     }
 }
 
@@ -139,158 +175,14 @@ img {
 
 @keyframes footerFadeIn{
     0% {
-        color: rgba(0, 0, 0, 0);
+        opacity: 0;
     }
 
     50% {
-        color: rgba(0, 0, 0, 0);
+        opacity: 0;
     }
 
     100% {
-        color: rgba(0, 0, 0, 1);
-    }
-}
-
-/*1440p displays*/
-@media only screen and (max-width: 2560px) {
-    /*Global*/
-    html *{
-        border-radius: 12px 12px 12px 12px;
-    }
-
-    select{
-        width: 96px;
-    }
-
-    h1{
-        font-size: 57px;
-    }
-
-    img {
-        width: 36px;
-        height: 36px;
-        padding-top: 15px;
-    }
-
-
-    /*Classes*/
-    .box{
-        width: 888px;
-        margin-top: 270px;
-        border: 4.5px solid black;
-        padding: 30px;
-        border-radius: 30px 30px 30px 30px;
-    }
-
-    .options{
-        font-size: 27px;
-        margin-left: 165px;
-        margin-right: 165px;
-    }
-
-    .result{
-        margin-top: 30px;
-    }
-
-    .error{
-        font-size: 36px;
-    }
-
-
-    /*IDs*/
-    #length{
-        width: 36px;
-    }
-
-    #copy {
-        padding-left: 3px;
-    }
-
-    #view {
-        padding-left: 39px;
-    }
-
-
-    /*Animations*/
-    @keyframes boxSlideIn{
-        0% {
-            margin-top: 1200px;
-        }
-
-        100% {
-            margin-top: 180px;
-        }
-    }
-}
-
-/*1080p displays*/
-@media only screen and (max-width: 1920px) {
-    /*Global*/
-    html *{
-        border-radius: 8px 8px 8px 8px;
-    }
-
-    select{
-        width: 64px;
-    }
-
-    h1{
-        font-size: 38px;
-    }
-
-    img {
-        width: 24px;
-        height: 24px;
-        padding-top: 10px;
-    }
-
-
-    /*Classes*/
-    .box{
-        width: 592px;
-        margin-top: 180px;
-        border: 3px solid black;
-        padding: 20px;
-        border-radius: 20px 20px 20px 20px;
-    }
-
-    .options{
-        font-size: 18px;
-        margin-left: 110px;
-        margin-right: 110px;
-    }
-
-    .result{
-        margin-top: 20px;
-    }
-
-    .error{
-        font-size: 24px;
-    }
-
-
-    /*IDs*/
-    #length{
-        width: 24px;
-    }
-
-    #copy {
-        padding-left: 2px;
-    }
-
-    #view {
-        padding-left: 26px;
-    }
-
-
-    /*Animations*/
-    @keyframes boxSlideIn{
-        0% {
-            margin-top: 1200px;
-        }
-
-        100% {
-            margin-top: 180px;
-        }
+        opacity: 1;
     }
 }
