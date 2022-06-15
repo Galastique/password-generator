@@ -53,6 +53,7 @@ footer{
     width: 100%;
     text-align: center;
     color: rgb(0, 0, 0);
+    cursor: default;
     animation: footerFadeIn 8s;
 }
 
@@ -125,6 +126,7 @@ input {
     text-align: center;
     font-size: calc(24px * var(--scale));
     color: rgb(0, 180, 0);
+    cursor: default;
 }
 
 .success{
@@ -132,6 +134,7 @@ input {
     vertical-align: middle;
     text-align: center;
     color: rgb(0, 0, 0);
+    cursor: default;
 }
 
 .fadeOut{
