@@ -78,7 +78,7 @@ img {
     height: calc(22px * var(--scale));
     padding-top: calc(10px * var(--scale));
     position: absolute; 
-    bottom: calc(0px * var(--scale));
+    bottom: calc(0.2px * var(--scale));
 }
 
 button, select, input {
